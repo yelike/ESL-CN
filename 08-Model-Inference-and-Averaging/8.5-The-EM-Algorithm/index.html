@@ -80,13 +80,6 @@
     
     <script src="../../js/mathjax.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3680148472128768",
-    enable_page_level_ads: true
-  });
-</script>
   </head>
   
     
@@ -147,35 +140,11 @@
         <!--
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
-
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-          
         
         -->
+        <div style="padding-top:0.4rem;padding-bottom:0.4rem;width:15rem;height:4rem;">
+          <iframe src="https://github.com/sponsors/szcf-weiya/button" title="Sponsor szcf-weiya" height="100%" width="100%" style="display:block;margin:auto;border:0;"></iframe>
+        </div>
       </div>
       
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -241,7 +210,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="上篇" class="md-tabs__link">
+        <a href="../../01-Introduction/1.1-Introduction/index.html" title="上篇" class="md-tabs__link">
           上篇
         </a>
       
@@ -494,7 +463,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
+    <a href="../../01-Introduction/1.1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
       1.1 导言
     </a>
   </li>
@@ -3236,6 +3205,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../notes/BS/bs/index.html" title="B 样条在 R, Python, Cpp 中的实现" class="md-nav__link">
+      B 样条在 R, Python, Cpp 中的实现
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3358,8 +3339,8 @@
 <td>szcf-weiya</td>
 </tr>
 <tr>
-<td>时间</td>
-<td>2016-12-20 &amp; 2017-02-01:2017-02-03</td>
+<td>发布</td>
+<td>2017-02-08</td>
 </tr>
 <tr>
 <td>更新</td>
@@ -3446,7 +3427,7 @@ L(\theta,\mathbf{Z,\Delta}) = \prod\limits_{i\in \cal I} (1-\Delta_i)(1-\pi)\phi
 \gamma_i(\theta)=\E(\Delta_i\mid\theta,\mathbf Z)=\Pr(\Delta_i=1\mid \theta,\mathbf Z)\tag{8.41}
 </script>
 也称为模型 2 对于每个观测 $i$ 的责任 (responsibility)．我们用一种称作 EM 算法（算法 8.1 中给出）的过程来求解这个特殊的高斯混合模型．在期望 (expectation) 这一步，我们对每一个模型的每一个观测做一个软赋值：根据每个模型下训练集点的相对密度，参数的当前估计用来给 responsibilities 赋值．在最大化(maximization) 那一步，对极大似然估计中使用的 responsibilities 进行加权用来更新参数估计．</p>
-<p>构造初始的 $\hat\mu_1$ 和 $\hat\mu_2$ 的一种很好的方式便是简单地随机选择 $y_i$ 中的两个值．$\hat\sigma^2_1$ 和 $\hat\sigma^2_2$ 都等于整体的样本方差 $\sum_{i=1}^N(y_i-\hat y)^2/N$．最大比例的 $\hat\pi$ 可以从 0.5 开始．</p>
+<p>构造初始的 $\hat\mu_1$ 和 $\hat\mu_2$ 的一种很好的方式便是简单地随机选择 $y_i$ 中的两个值．$\hat\sigma^2_1$ 和 $\hat\sigma^2_2$ 都等于整体的样本方差 $\sum_{i=1}^N(y_i-\bar y)^2/N$．最大比例的 $\hat\pi$ 可以从 0.5 开始．</p>
 <p>注意到实际中概率的最大值发生在当我们固定一个数据点，换句话说，对于一些 $i$ 令 $\hat\mu_1=y_i$，$\hat\sigma^2_1=0$．这给出了无限大的概率，但是这不是一个有用的解．因此实际上我们寻找概率的一个良好的局部最大值，满足 $\hat\sigma^2_1,\hat\sigma^2_2&gt;0$．进一步，可以有多个局部最大值满足$\hat\sigma^2_1,\hat\sigma^2_2&gt;0$．在我们例子中，我们用一系列不同的初始参数值来运行 EM 算法，所有的都满足 $\hat\sigma^2_k&gt;0.5$，然后选择使得概率最大的那个．图 8.6 显示了在最大化对数概率的 EM 算法的过程．表 8.2 显示了在给定迭代次数的 EM 过程下 $\hat\pi=\sum_i\hat\gamma_i/N$ 是类别 2 中观测值比例的极大似然估计．</p>
 <p><img alt="" src="../../img/08/alg8.1.png" /></p>
 <p><img alt="" src="../../img/08/tab8.2.png" /></p>
@@ -3563,6 +3544,16 @@ F(\theta',\tilde P) = \E_{\tilde P}[\ell_0(\theta';\mathbf T)] - \E_{\tilde P}[\
               
               
                 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3680148472128768"
+     data-ad-slot="6465742678"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                   <h2 id="__comments">Comments</h2>
                   <div id="comment"></div>
 <script>
@@ -3627,7 +3618,7 @@ F(\theta',\tilde P) = \E_{\tilde P}[\ell_0(\theta';\mathbf T)] - \E_{\tilde P}[\
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2016-2020 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
+            Copyright &copy; 2016-2021 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
           </div>
         
         <!--
@@ -3637,7 +3628,7 @@ F(\theta',\tilde P) = \E_{\tilde P}[\ell_0(\theta';\mathbf T)] - \E_{\tilde P}[\
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
         -->
-        Last Build Date UTC : 2020-03-19 04:18:27
+        Last Build Date UTC : 2021-06-20 17:52:26
       </div>
       
         

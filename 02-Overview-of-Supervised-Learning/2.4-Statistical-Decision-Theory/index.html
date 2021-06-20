@@ -80,13 +80,6 @@
     
     <script src="../../js/mathjax.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3680148472128768",
-    enable_page_level_ads: true
-  });
-</script>
   </head>
   
     
@@ -147,35 +140,11 @@
         <!--
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
-
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-          
         
         -->
+        <div style="padding-top:0.4rem;padding-bottom:0.4rem;width:15rem;height:4rem;">
+          <iframe src="https://github.com/sponsors/szcf-weiya/button" title="Sponsor szcf-weiya" height="100%" width="100%" style="display:block;margin:auto;border:0;"></iframe>
+        </div>
       </div>
       
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -241,7 +210,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="上篇" class="md-tabs__link">
+        <a href="../../01-Introduction/1.1-Introduction/index.html" title="上篇" class="md-tabs__link">
           上篇
         </a>
       
@@ -496,7 +465,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
+    <a href="../../01-Introduction/1.1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
       1.1 导言
     </a>
   </li>
@@ -3189,6 +3158,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../notes/BS/bs/index.html" title="B 样条在 R, Python, Cpp 中的实现" class="md-nav__link">
+      B 样条在 R, Python, Cpp 中的实现
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3277,8 +3258,8 @@
 <td>szcf-weiya</td>
 </tr>
 <tr>
-<td>时间</td>
-<td>2016-08-01</td>
+<td>发布</td>
+<td>2016-09-30</td>
 </tr>
 <tr>
 <td>更新</td>
@@ -3311,12 +3292,13 @@
 f(x) = \argmin_c\E_{Y\mid X}([Y-c]^2\mid X=x)\tag{2.12}
 </script>
 </p>
-<p>解为</p>
+<p>解为条件期望</p>
 <p>
 <script type="math/tex; mode=display">
-f(x) = \E(Y\mid X=x)\tag{2.13}
+f(x) = \E(Y\mid X=x)\tag{2.13}\,,
 </script>
 </p>
+<p>也被称作 <strong>回归 (regression)</strong> 函数。因此 $Y$ 在任意点 $X=x$ 处的最优预测为条件均值，“最优”是在均方误差意义下的。</p>
 <div class="admonition note">
 <p class="admonition-title">原书注：</p>
 <p>此处条件是指对联合概率密度分解 $\Pr(X, Y ) = \Pr(Y \mid X)\Pr(X)$，其中 $\Pr(Y \mid X) = \Pr(Y, X)/\Pr(X)$，因此分解成了双变量的积分．</p>
@@ -3332,11 +3314,6 @@ f(x) = \E(Y\mid X=x)\tag{2.13}
 <li>用样本数据的平均近似期望；</li>
 <li>在每一点的条件（期望）松弛为在离该目标点近的某个区域上的条件（期望）．</li>
 </ul>
-<p>
-<script type="math/tex; mode=display">
-\hat{f}(x)=\Ave(y_i\mid x_i\in N_k(x))\tag{2.14}
-</script>
-</p>
 <p>对于规模为 $N$ 的大规模训练数据，邻域中的点更可能接近 $x$，而且当 $k$ 越大，平均值会更加稳定．事实上，在联合概率分布 $\Pr(X,Y)$ 温和正则条件下，可以证明当 $N,k \longrightarrow \infty$ 使得 $k/N \longrightarrow 0$ 时，$\hat{f}(x) \longrightarrow \E(Y \mid X = x)$．根据这个，为什么看得更远，因为似乎我们有个一般的近似量吗？我们经常没有非常大的样本．如果线性或者其它更多结构化的模型是合适的，那么我们经常可以得到比 $k$-最近邻更稳定的估计，尽管这些知识必须也要从数据中学习．然而还有其它的问题，有时是致命的．在下一个部分我们看到当维数 $p$ 变大，$k$-最近邻的度量大小也随之变大．所以最近邻代替条件会让我们非常失望．收敛仍然保持，但是当维数增长后收敛 <strong>速率 (rate)</strong> 变小．</p>
 <p>线性回归怎样适应这个框架？最简单的解释是假设回归函数 $f(x)$ 近似线性</p>
 <p>
@@ -3427,6 +3404,16 @@ L(\cG_k, g) = \begin{cases}
               
               
                 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3680148472128768"
+     data-ad-slot="6465742678"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                   <h2 id="__comments">Comments</h2>
                   <div id="comment"></div>
 <script>
@@ -3491,7 +3478,7 @@ L(\cG_k, g) = \begin{cases}
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2016-2020 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
+            Copyright &copy; 2016-2021 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
           </div>
         
         <!--
@@ -3501,7 +3488,7 @@ L(\cG_k, g) = \begin{cases}
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
         -->
-        Last Build Date UTC : 2020-03-19 04:18:24
+        Last Build Date UTC : 2021-06-20 17:52:22
       </div>
       
         

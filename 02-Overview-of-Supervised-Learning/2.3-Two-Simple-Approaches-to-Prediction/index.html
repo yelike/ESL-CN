@@ -80,13 +80,6 @@
     
     <script src="../../js/mathjax.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3680148472128768",
-    enable_page_level_ads: true
-  });
-</script>
   </head>
   
     
@@ -147,35 +140,11 @@
         <!--
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
-
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-          
         
         -->
+        <div style="padding-top:0.4rem;padding-bottom:0.4rem;width:15rem;height:4rem;">
+          <iframe src="https://github.com/sponsors/szcf-weiya/button" title="Sponsor szcf-weiya" height="100%" width="100%" style="display:block;margin:auto;border:0;"></iframe>
+        </div>
       </div>
       
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -241,7 +210,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="上篇" class="md-tabs__link">
+        <a href="../../01-Introduction/1.1-Introduction/index.html" title="上篇" class="md-tabs__link">
           上篇
         </a>
       
@@ -496,7 +465,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
+    <a href="../../01-Introduction/1.1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
       1.1 导言
     </a>
   </li>
@@ -3236,6 +3205,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../notes/BS/bs/index.html" title="B 样条在 R, Python, Cpp 中的实现" class="md-nav__link">
+      B 样条在 R, Python, Cpp 中的实现
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3358,8 +3339,8 @@
 <td>szcf-weiya</td>
 </tr>
 <tr>
-<td>时间</td>
-<td>2016-08-01</td>
+<td>发布</td>
+<td>2016-09-30</td>
 </tr>
 <tr>
 <td>更新</td>
@@ -3446,7 +3427,7 @@
 <p>最邻近方法用训练集 $\mathcal{T}$ 中在输入空间中离 $x$ 最近的观测组成 $\hat{Y}$．特别地，对 $\hat{Y}$ 的 $k$-最近邻拟合定义如下：</p>
 <p>
 <script type="math/tex; mode=display">
-\hat{Y}(x)=\frac{1}{k}\sum\limits_{x_i\in N_k(x)}y_i\tag{2.8}
+\hat{Y}(x)=\frac{1}{k}\sum\limits_{x_i\in N_k(x)}y_i\tag{2.8}\label{2.8}
 </script>
 </p>
 <p>$N_k(x)$ 是在训练样本中 $k$ 个离 $x$ 最近的点 $x_i$ 组成的邻域．远近意味着度量，目前我们假设是欧氏距离．因此，用文字来叙述就是，我们在输入空间中找到离 $x$ 最近的 $k$ 个观测 $x_i$，然后取这些值的平均．</p>
@@ -3458,14 +3439,14 @@
 <p>图 2.3 显示了 $1$-最近邻的分类结果：$\hat{Y}$ 被赋了距离 $x$ 的最近点 $x_{\ell}$ 的值 $y_{\ell}$．这种情形下，区域的分类可以相对简单的计算出来，这对应训练数据的 <strong>泰森多边形图 (Voronoi tessellation)</strong>．每个点 $x_i$ 都有一个对应的区域，这些小区域形成了离某点最近的区域．对于小区域里面的每一个点，$\hat{G}(x)=g_i$．判别边界比之前更加不规则了．</p>
 <p><img alt="" src="../../img/02/fig2.3.png" /></p>
 <p>图 2.1 中一样的二维分类的例子．类别被二进制变量编码（蓝色为 $0$，橘黄色为 $1$），通过 $1$-最近邻分类预测．</p>
-<p>$k$-最近邻平均的方法以与定量输出 $Y$ 的回归完全相同的方式定义，尽管 $k=1$ 是不太可能的选择．</p>
+<p>对于关于定量输出变量 $Y$ 的回归问题，<strong>k-最近邻平均 (k-nearest-neighbor averaging)</strong> 方法的定义和 \eqref{2.8} 完全一样，尽管 $k=1$ 是不太可能的选择．</p>
 <p>相比较图 2.1，在图 2.2 中更少的训练观测值被错误地分类．尽管如此，这个不应该给我们太大的安慰，因为图 2.3 中没有一个训练数据被错误地分类．一个小小的想法表明在 $k$-最近邻拟合中，训练数据的误差应该近似是关于 $k$ 的增函数，而且当 $k=1$ 时误差总是为 $0$．一个独立的测试集比较这些不同的方法会给我们一个满意的方法．</p>
 <p>看起来 $k$-最近邻拟合只有一个参数，$k$ 值的大小，而在最小二乘有 $p$ 个参数．尽管情况就是这样，我们将会看到 $k$-最近邻的 <strong>有效(effective)</strong> 参数个数是 $\frac{N}{k}$，而且一般地会比 $p$ 大，另外随着 $k$ 的增长有效参数个数减少．为了弄清楚为什么，注意到如果邻域没有重叠，则会有 $\frac{N}{k}$ 个邻域，而且我们在每个区域内拟合一个参数．</p>
 <p>我们不能在训练集上将误差平方和作为选择 $k$ 的标准，因为我们总会选择 $k=1$．$k$-最近邻方法对于上文中描述的情境 $2$ 更适合，尽管对于高斯分布的数据 $k$-最近邻判别边界会有不必要的噪声．</p>
 <h2 id="_3">从最小二乘到最近邻<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>最小二乘法的线性判别边界非常光滑，而且显然拟合得很稳定．它似乎严重依赖线性判别边界是合理的假设．我们马上用文字讨论，它有低方差和潜在的高偏差．</p>
 <p>另一方面，$k$-最近邻过程似乎不非常依赖任何关于数据的假设，而且可以适用于任何情形．然而，判别边界的任何特定的分区都依赖几个输入点和它们的特定位置，而且因此左右摇摆不稳定——高方差和低偏差．</p>
-<p>每种方法都有各自处理得最好的情形；特别地，线性回归更适合上面介绍的情形 $1$，而最邻近方法最适合情形 $2$．是来揭露困难的时候了．事实上数据是从介于两种情形的模型中模拟出来的，但是更接近于情形 $2$．首先，我们从双变量高斯分布 $N((1,0)^T,\bf{I})$ 中产生 $10$ 个均值 $m_k$，标记此类为蓝色．类似地，从双变量高斯分布 $N((0,1)^T,\bf{I})$ 中产生 $10$ 个均值并标记此类为橘黄色．然后对每一类按照下面方式产生 $100$ 个观测：对于每个观测，我们以 $1/10$ 的概率随机选择一个 $m_k$，然后产生 $N(m_k,\bf{I}/5)$，因此对于每一类引出了一个高斯分布簇的混合．图 2.4 显示了从该模型产生 $10000$ 个新观测的的分类结果，我们比较最小二乘法和一系列 $k$ 值对应的 $k$-最近邻的结果．</p>
+<p>每种方法都有各自处理得最好的情形；特别地，线性回归更适合上面介绍的情形 $1$，而最邻近方法最适合情形 $2$．是时候揭露真相了．事实上数据是从介于两种情形的模型中模拟出来的，但是更接近于情形 $2$．首先，我们从双变量高斯分布 $N((1,0)^T,\bf{I})$ 中产生 $10$ 个均值 $m_k$，标记此类为蓝色．类似地，从双变量高斯分布 $N((0,1)^T,\bf{I})$ 中产生 $10$ 个均值并标记此类为橘黄色．然后对每一类按照下面方式产生 $100$ 个观测：对于每个观测，我们以 $1/10$ 的概率随机选择一个 $m_k$，然后产生 $N(m_k,\bf{I}/5)$，因此对于每一类引出了一个高斯分布簇的混合．图 2.4 显示了从该模型产生 $10000$ 个新观测的的分类结果，我们比较最小二乘法和一系列 $k$ 值对应的 $k$-最近邻的结果．</p>
 <p><img alt="" src="../../img/02/fig2.4.png" /></p>
 <blockquote>
 <p>图 2.4：在图 2.1，图 2.2，图 2.3 中运用的模拟例子的错误分类曲线．我们用的是 $200$ 个样本作为训练数据，检测数据规模为 $10000$个．橘黄色的曲线对应 $k$-最近邻分类的测试数据，蓝色的曲线对应 $k$-最近邻分类的训练数据．线性回归的结果是在自由度为 $3$ 上的大橘黄色和蓝色的方块．紫色的直线是最优的贝叶斯错误率．</p>
@@ -3484,6 +3465,16 @@
               
               
                 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3680148472128768"
+     data-ad-slot="6465742678"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                   <h2 id="__comments">Comments</h2>
                   <div id="comment"></div>
 <script>
@@ -3548,7 +3539,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2016-2020 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
+            Copyright &copy; 2016-2021 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
           </div>
         
         <!--
@@ -3558,7 +3549,7 @@
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
         -->
-        Last Build Date UTC : 2020-03-19 04:18:24
+        Last Build Date UTC : 2021-06-20 17:52:22
       </div>
       
         

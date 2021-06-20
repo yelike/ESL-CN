@@ -80,13 +80,6 @@
     
     <script src="../../js/mathjax.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3680148472128768",
-    enable_page_level_ads: true
-  });
-</script>
   </head>
   
     
@@ -147,35 +140,11 @@
         <!--
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
-
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-          
         
         -->
+        <div style="padding-top:0.4rem;padding-bottom:0.4rem;width:15rem;height:4rem;">
+          <iframe src="https://github.com/sponsors/szcf-weiya/button" title="Sponsor szcf-weiya" height="100%" width="100%" style="display:block;margin:auto;border:0;"></iframe>
+        </div>
       </div>
       
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -241,7 +210,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="上篇" class="md-tabs__link">
+        <a href="../../01-Introduction/1.1-Introduction/index.html" title="上篇" class="md-tabs__link">
           上篇
         </a>
       
@@ -496,7 +465,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
+    <a href="../../01-Introduction/1.1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
       1.1 导言
     </a>
   </li>
@@ -3236,6 +3205,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../notes/BS/bs/index.html" title="B 样条在 R, Python, Cpp 中的实现" class="md-nav__link">
+      B 样条在 R, Python, Cpp 中的实现
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3358,7 +3339,7 @@
 <td>szcf-weiya</td>
 </tr>
 <tr>
-<td>时间</td>
+<td>发布</td>
 <td>2017-03-04</td>
 </tr>
 <tr>
@@ -3416,9 +3397,9 @@ P(X+Y\le z) = \int F(z-y)dG(y) = F*G(z)\,.
 <p>分享一篇介绍 Python 实现核密度估计的<a href="https://jakevdp.github.io/blog/2013/12/01/kernel-density-estimation/">博客</a>．</p>
 </div>
 <h2 id="_2">核密度分类<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>利用贝叶斯定理可以直接地对分类做非参数密度估计．假设对于 $J$ 分类问题，我们对每个类别单独拟合非参密度估计 $\hat f_j(X),j=1,\ldots,J$，并且我们有类别先验概率 $\hat \pi_j$ 的估计（通常是样本比例）．则
+<p>利用贝叶斯定理可以直接地对分类做非参数密度估计．假设对于 $J$ 分类问题，我们对每个类别单独拟合非参密度估计 $\hat{f_j}(X),j=1,\ldots,J$，并且我们有类别先验概率 $\hat \pi_j$ 的估计（通常是样本比例）．则
 <script type="math/tex; mode=display">
-\widehat{\Pr}(G=j\mid X=x_0)=\frac{\hat \pi_j\hat f_j(x_0)}{\sum_{k=1}^J\hat\pi_k\hat f_k(x_0)}\tag{6.25}
+\widehat{\Pr}(G=j\mid X=x_0)=\frac{\hat \pi_j\hat{f_j}(x_0)}{\sum_{k=1}^J\hat\pi_k\hat f_k(x_0)}\tag{6.25}
 </script>
 </p>
 <p>图 6.14 将这个方法应用在心脏风险因子研究中估计 CHD 的患病率中，并且应该与图 6.12 的左图进行比较．主要的差异出现在图 6.14 中右图的高 SBP 区域．这个区域中对于两个类别的数据都是稀疏的，并且因为高斯核密度估计采用度量核，所以密度估计在其他区域中效果很差（高方差）．局部逻辑斯蒂回归方法（6.20）采用 $k$-NN 带宽的三次立方核；这有效地拓宽了这个区域中的核，并且利用局部线性假设来对估计进行光滑（在逻辑斯蒂尺度上）．</p>
@@ -3480,6 +3461,16 @@ f_j(X)=\prod\limits_{k=1}^pf_{jk}(X_k)\tag{6.26}\label{6.26}
               
               
                 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3680148472128768"
+     data-ad-slot="6465742678"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                   <h2 id="__comments">Comments</h2>
                   <div id="comment"></div>
 <script>
@@ -3544,7 +3535,7 @@ f_j(X)=\prod\limits_{k=1}^pf_{jk}(X_k)\tag{6.26}\label{6.26}
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2016-2020 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
+            Copyright &copy; 2016-2021 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
           </div>
         
         <!--
@@ -3554,7 +3545,7 @@ f_j(X)=\prod\limits_{k=1}^pf_{jk}(X_k)\tag{6.26}\label{6.26}
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
         -->
-        Last Build Date UTC : 2020-03-19 04:18:26
+        Last Build Date UTC : 2021-06-20 17:52:24
       </div>
       
         

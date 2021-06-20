@@ -80,13 +80,6 @@
     
     <script src="../../js/mathjax.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3680148472128768",
-    enable_page_level_ads: true
-  });
-</script>
   </head>
   
     
@@ -147,35 +140,11 @@
         <!--
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
-
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-          
         
         -->
+        <div style="padding-top:0.4rem;padding-bottom:0.4rem;width:15rem;height:4rem;">
+          <iframe src="https://github.com/sponsors/szcf-weiya/button" title="Sponsor szcf-weiya" height="100%" width="100%" style="display:block;margin:auto;border:0;"></iframe>
+        </div>
       </div>
       
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -241,7 +210,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="上篇" class="md-tabs__link">
+        <a href="../../01-Introduction/1.1-Introduction/index.html" title="上篇" class="md-tabs__link">
           上篇
         </a>
       
@@ -496,7 +465,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
+    <a href="../../01-Introduction/1.1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
       1.1 导言
     </a>
   </li>
@@ -3189,6 +3158,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../notes/BS/bs/index.html" title="B 样条在 R, Python, Cpp 中的实现" class="md-nav__link">
+      B 样条在 R, Python, Cpp 中的实现
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3277,8 +3258,8 @@
 <td>szcf-weiya</td>
 </tr>
 <tr>
-<td>时间</td>
-<td>2017-03-01：2017-03-01</td>
+<td>发布</td>
+<td>2017-03-01</td>
 </tr>
 <tr>
 <td>更新</td>
@@ -3302,10 +3283,25 @@
 <li>如果窗口较宽，$\hat f(x_0)$ 的方差相对于任意 $y_i$ 的方差较小，这是因为平均的效应．偏差会较高，因为我们现在采用的是与 $x_0$ 离得较远的观测 $x_i$，而且不保证 $f(x_i)$ 离 $f(x_0)$ 较近．</li>
 </ul>
 <p>相似的结论可以应用到局部回归估计，比如局部线性：当宽度趋于 $0$，估计量则近似为对训练数据插值得到的分段线性函数；当宽度趋于无穷大，则拟合值近似为对数据的整体最小二乘拟合．</p>
-<p>这里应用<a href="../../05-Basis-Expansions-and-Regularization/5.1-Introduction/index.html">第五章</a>中选择光滑样条的正规化参数的讨论．局部回归光滑器是线性估计器；$\mathbf{\hat f=S_\lambda y}$ 中的光滑矩阵由等价核 (6.8) 构成，并且第 $ij$ 个元素值为 ${\mathbf S_\lambda}_{ij}=l_{i}(x_{j})$．舍一法交叉验证特别地简单（<a href="https://github.com/szcf-weiya/ESL-CN/issues/150">练习 6.7</a>），广义交叉验证，$C_p$（<a href="https://github.com/szcf-weiya/ESL-CN/issues/151">练习 6.10</a>），以及 $k$ 折交叉验证也很简单．有效自由度再一次定义为 $\trace(\mathbf S_\lambda)$，并且可以用来校准光滑的程度．</p>
+<div class="admonition note">
+<p class="admonition-title">weiya 注：Recall</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{align}
+\hat f(x_0)&= b(x_0)^T(\mathbf {B^TW}(x_0)\mathbf B)^{-1}\mathbf B^T\mathbf W(x_0)\mathbf y\tag{6.8}\label{6.8}\\
+&=\sum\limits_{i=1}^Nl_i(x_0)y_i\tag{6.9}\label{6.9}
+\end{align}
+</script>
+</p>
+</div>
+<p>这里应用<a href="../../05-Basis-Expansions-and-Regularization/5.1-Introduction/index.html">第五章</a>中选择光滑样条的正规化参数的讨论．局部回归光滑器是线性估计器；$\mathbf{\hat f=S_\lambda y}$ 中的光滑矩阵由等价核 \eqref{6.8} 构成，并且第 $ij$ 个元素值为 ${\mathbf S_\lambda}_{ij}=l_{i}(x_{j})$．舍一法交叉验证特别地简单（<a href="https://github.com/szcf-weiya/ESL-CN/issues/150">练习 6.7</a>），广义交叉验证，$C_p$（<a href="https://github.com/szcf-weiya/ESL-CN/issues/151">练习 6.10</a>），以及 $k$ 折交叉验证也很简单．有效自由度再一次定义为 $\trace(\mathbf S_\lambda)$，并且可以用来校准光滑的程度．</p>
 <div class="admonition info">
 <p class="admonition-title">weiya 注：Ex. 6.7</p>
 <p>已解决，详见 <a href="https://github.com/szcf-weiya/ESL-CN/issues/150">Issue 150: Ex. 6.7</a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">weiya 注：Ex. 6.10</p>
+<p>已解决，详见 <a href="https://github.com/szcf-weiya/ESL-CN/issues/151">Issue 151: Ex. 6.10</a>.</p>
 </div>
 <p>图 6.7 比较了光滑样条和局部线性回归的等价核．局部线性光滑器有 $40\%$ 的<strong>跨度 (span)</strong>，得到 $df=\trace(\mathbf S_\lambda)=5.86$．光滑样条进行校准后得到同样的 $df$，并且它们的等价核非常相似．</p>
 <p><img alt="" src="../../img/06/fig6.7.png" /></p>
@@ -3318,6 +3314,16 @@
               
               
                 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3680148472128768"
+     data-ad-slot="6465742678"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                   <h2 id="__comments">Comments</h2>
                   <div id="comment"></div>
 <script>
@@ -3382,7 +3388,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2016-2020 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
+            Copyright &copy; 2016-2021 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
           </div>
         
         <!--
@@ -3392,7 +3398,7 @@
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
         -->
-        Last Build Date UTC : 2020-03-19 04:18:26
+        Last Build Date UTC : 2021-06-20 17:52:24
       </div>
       
         

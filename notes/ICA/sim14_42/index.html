@@ -80,13 +80,6 @@
     
     <script src="../../../js/mathjax.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3680148472128768",
-    enable_page_level_ads: true
-  });
-</script>
   </head>
   
     
@@ -147,35 +140,11 @@
         <!--
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
-
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-          
         
         -->
+        <div style="padding-top:0.4rem;padding-bottom:0.4rem;width:15rem;height:4rem;">
+          <iframe src="https://github.com/sponsors/szcf-weiya/button" title="Sponsor szcf-weiya" height="100%" width="100%" style="display:block;margin:auto;border:0;"></iframe>
+        </div>
       </div>
       
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -241,7 +210,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="上篇" class="md-tabs__link">
+        <a href="../../../01-Introduction/1.1-Introduction/index.html" title="上篇" class="md-tabs__link">
           上篇
         </a>
       
@@ -494,7 +463,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
+    <a href="../../../01-Introduction/1.1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
       1.1 导言
     </a>
   </li>
@@ -3270,6 +3239,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../BS/bs/index.html" title="B 样条在 R, Python, Cpp 中的实现" class="md-nav__link">
+      B 样条在 R, Python, Cpp 中的实现
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3426,8 +3407,8 @@
 <td>szcf-weiya</td>
 </tr>
 <tr>
-<td>时间</td>
-<td>2018-01-22</td>
+<td>发布</td>
+<td>2018-01-23</td>
 </tr>
 <tr>
 <td>更新</td>
@@ -3458,7 +3439,6 @@ S=XA_0^{-1}
 <span class="n">s</span> <span class="o">=</span> <span class="nf">scale</span><span class="p">(</span><span class="nf">cbind</span><span class="p">(</span><span class="nf">rjordan</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span><span class="n">N</span><span class="p">),</span><span class="nf">rjordan</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span><span class="n">N</span><span class="p">)))</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%*%</span> <span class="n">A0</span>
 </code></pre></div>
-
 
 <p>最终我们得到观测值<code>x</code>。</p>
 <h3 id="_2">白化<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -3493,7 +3473,6 @@ X^*=SA^T
 <span class="n">target</span> <span class="o">&lt;-</span> <span class="nf">diag</span><span class="p">(</span><span class="n">sx</span><span class="o">$</span><span class="n">d</span><span class="p">)</span> <span class="o">%*%</span> <span class="nf">t</span><span class="p">(</span><span class="n">sx</span><span class="o">$</span><span class="n">v</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">target</span><span class="o">/</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="c1"># new mixing maxtrix</span>
 </code></pre></div>
 
-
 <h3 id="prodenica"><code>ProDenICA</code>法<a class="headerlink" href="#prodenica" title="Permanent link">&para;</a></h3>
 <p>细节不再展开，直接利用<code>ProDenICA</code>中的包进行计算</p>
 <div class="codehilite"><pre><span></span><code><span class="n">W0</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">rnorm</span><span class="p">(</span><span class="m">2</span><span class="o">*</span><span class="m">2</span><span class="p">),</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
@@ -3501,12 +3480,10 @@ X^*=SA^T
 <span class="n">W1</span> <span class="o">&lt;-</span> <span class="nf">ProDenICA</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W0</span><span class="o">=</span><span class="n">W0</span><span class="p">,</span><span class="n">trace</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="n">Gfunc</span><span class="o">=</span><span class="n">GPois</span><span class="p">)</span><span class="o">$</span><span class="n">W</span>
 </code></pre></div>
 
-
 <p>得到$A$的估计值<code>W1</code></p>
 <h3 id="amari">计算Amari距离<a class="headerlink" href="#amari" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="nf">amari</span><span class="p">(</span><span class="n">W1</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
 </code></pre></div>
-
 
 <h2 id="_3">比较两种算法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>这一部分试图重现Fig. 14.42。</p>
@@ -3571,7 +3548,6 @@ X^*=SA^T
 <span class="c1">#}</span>
 </code></pre></div>
 
-
 <p>得到下图</p>
 <p><img alt="" src="../fast_vs_proden.png" /></p>
 <p>与图14.42的右图中的<code>FastICA</code>和<code>ProDenICA</code>的图象一致。</p>
@@ -3585,6 +3561,16 @@ X^*=SA^T
               
               
                 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3680148472128768"
+     data-ad-slot="6465742678"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                   <h2 id="__comments">Comments</h2>
                   <div id="comment"></div>
 <script>
@@ -3649,7 +3635,7 @@ X^*=SA^T
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2016-2020 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
+            Copyright &copy; 2016-2021 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
           </div>
         
         <!--
@@ -3659,7 +3645,7 @@ X^*=SA^T
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
         -->
-        Last Build Date UTC : 2020-03-19 04:18:31
+        Last Build Date UTC : 2021-06-20 17:52:32
       </div>
       
         

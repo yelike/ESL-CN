@@ -80,13 +80,6 @@
     
     <script src="../../../js/mathjax.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3680148472128768",
-    enable_page_level_ads: true
-  });
-</script>
   </head>
   
     
@@ -147,35 +140,11 @@
         <!--
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
-
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-          
         
         -->
+        <div style="padding-top:0.4rem;padding-bottom:0.4rem;width:15rem;height:4rem;">
+          <iframe src="https://github.com/sponsors/szcf-weiya/button" title="Sponsor szcf-weiya" height="100%" width="100%" style="display:block;margin:auto;border:0;"></iframe>
+        </div>
       </div>
       
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -241,7 +210,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="上篇" class="md-tabs__link">
+        <a href="../../../01-Introduction/1.1-Introduction/index.html" title="上篇" class="md-tabs__link">
           上篇
         </a>
       
@@ -494,7 +463,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
+    <a href="../../../01-Introduction/1.1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
       1.1 导言
     </a>
   </li>
@@ -3257,6 +3226,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../BS/bs/index.html" title="B 样条在 R, Python, Cpp 中的实现" class="md-nav__link">
+      B 样条在 R, Python, Cpp 中的实现
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3400,8 +3381,8 @@
 <td>szcf-weiya</td>
 </tr>
 <tr>
-<td>时间</td>
-<td>2018-02-04</td>
+<td>发布</td>
+<td>2018-02-03</td>
 </tr>
 </tbody>
 </table>
@@ -3437,13 +3418,11 @@ Y=I(\mathrm{sign}\Big\{\prod\limits_{j=1}^3(X_j-\frac 12)\Big\}>0)
 <span class="p">}</span>
 </code></pre></div>
 
-
 <h2 id="_3">参数设定<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="n">n.train</span> <span class="o">=</span> <span class="m">100</span>
 <span class="n">n.test</span> <span class="o">=</span> <span class="m">1000</span>
 <span class="n">n.realization</span> <span class="o">=</span> <span class="m">10</span>
 </code></pre></div>
-
 
 <h2 id="k">k最近邻<a class="headerlink" href="#k" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">class</span><span class="p">)</span>
@@ -3451,7 +3430,6 @@ Y=I(\mathrm{sign}\Big\{\prod\limits_{j=1}^3(X_j-\frac 12)\Big\}>0)
 <span class="n">n.knn</span> <span class="o">=</span> <span class="nf">length</span><span class="p">(</span><span class="n">seq.knn</span><span class="p">)</span>
 <span class="n">err</span> <span class="o">=</span> <span class="nf">array</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="n">n.knn</span><span class="p">,</span> <span class="n">n.realization</span><span class="p">))</span>
 </code></pre></div>
-
 
 <p>编写在两个问题中k最近邻的模拟函数<code>knn.sim()</code></p>
 <div class="codehilite"><pre><span></span><code><span class="n">knn.sim</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">id</span><span class="p">){</span>
@@ -3468,7 +3446,6 @@ Y=I(\mathrm{sign}\Big\{\prod\limits_{j=1}^3(X_j-\frac 12)\Big\}>0)
   <span class="nf">return</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <p>编写整个模拟实验中通用的绘图函数<code>myplot()</code></p>
 <div class="codehilite"><pre><span></span><code><span class="n">myplot</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">seq.knn</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">main</span><span class="p">,</span> <span class="n">xlab</span><span class="p">,</span> <span class="n">ylim</span><span class="p">){</span>
@@ -3498,12 +3475,10 @@ Y=I(\mathrm{sign}\Big\{\prod\limits_{j=1}^3(X_j-\frac 12)\Big\}>0)
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>则Easy Problem的分类误差随邻居数变化的曲线为</p>
 <div class="codehilite"><pre><span></span><code><span class="n">err</span> <span class="o">=</span> <span class="nf">knn.sim</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 <span class="nf">myplot</span><span class="p">(</span><span class="n">seq.knn</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="s">&quot;Nearest Neighbors / Easy&quot;</span><span class="p">,</span> <span class="s">&quot;Number of Neighbors&quot;</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span> <span class="m">0.5</span><span class="p">))</span>
 </code></pre></div>
-
 
 <p><img alt="" src="../knn_easy.png" /></p>
 <p>对于Difficult Problem，我们有</p>
@@ -3511,14 +3486,12 @@ Y=I(\mathrm{sign}\Big\{\prod\limits_{j=1}^3(X_j-\frac 12)\Big\}>0)
 <span class="nf">myplot</span><span class="p">(</span><span class="n">seq.knn</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="s">&quot;Nearest Neighbors / Difficult&quot;</span><span class="p">,</span> <span class="s">&quot;Number of Neighbors&quot;</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.4</span><span class="p">,</span> <span class="m">0.6</span><span class="p">))</span>
 </code></pre></div>
 
-
 <p><img alt="" src="../knn_difficult.png" /></p>
 <h2 id="k-means">k-means聚类<a class="headerlink" href="#k-means" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="n">seq.kmeans</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="nf">seq</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="m">31</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="m">4</span><span class="p">))</span>
 <span class="n">n.kmeans</span> <span class="o">=</span> <span class="nf">length</span><span class="p">(</span><span class="n">seq.kmeans</span><span class="p">)</span>
 <span class="n">err</span> <span class="o">=</span> <span class="nf">array</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="n">n.kmeans</span><span class="p">,</span> <span class="n">n.realization</span><span class="p">))</span>
 </code></pre></div>
-
 
 <p>编写两个问题中k-means的模拟函数<code>kmeans.sim()</code></p>
 <div class="codehilite"><pre><span></span><code><span class="c1">## predict function for k-means</span>
@@ -3550,19 +3523,16 @@ Y=I(\mathrm{sign}\Big\{\prod\limits_{j=1}^3(X_j-\frac 12)\Big\}>0)
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>则Easy Problem的分类误差随原型个数变化的曲线为</p>
 <div class="codehilite"><pre><span></span><code><span class="n">err</span> <span class="o">=</span> <span class="nf">kmeans.sim</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 <span class="nf">myplot</span><span class="p">(</span><span class="n">seq.kmeans</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="s">&quot;K-means / Easy&quot;</span><span class="p">,</span> <span class="s">&quot;Number of Prototypes per Class&quot;</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span> <span class="m">0.5</span><span class="p">))</span>
 </code></pre></div>
-
 
 <p><img alt="" src="../kmeans_easy.png" /></p>
 <p>而Difficult Problem对应的图象为</p>
 <div class="codehilite"><pre><span></span><code><span class="n">err</span> <span class="o">=</span> <span class="nf">kmeans.sim</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 <span class="nf">myplot</span><span class="p">(</span><span class="n">seq.kmeans</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="s">&quot;K-means / Difficult&quot;</span><span class="p">,</span> <span class="s">&quot;Number of Prototypes per Class&quot;</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.4</span><span class="p">,</span> <span class="m">0.6</span><span class="p">))</span>
 </code></pre></div>
-
 
 <p><img alt="" src="../kmeans_difficult.png" /></p>
 <h2 id="_4">待解决的问题<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
@@ -3576,6 +3546,16 @@ Y=I(\mathrm{sign}\Big\{\prod\limits_{j=1}^3(X_j-\frac 12)\Big\}>0)
               
               
                 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3680148472128768"
+     data-ad-slot="6465742678"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                   <h2 id="__comments">Comments</h2>
                   <div id="comment"></div>
 <script>
@@ -3640,7 +3620,7 @@ Y=I(\mathrm{sign}\Big\{\prod\limits_{j=1}^3(X_j-\frac 12)\Big\}>0)
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2016-2020 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
+            Copyright &copy; 2016-2021 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
           </div>
         
         <!--
@@ -3650,7 +3630,7 @@ Y=I(\mathrm{sign}\Big\{\prod\limits_{j=1}^3(X_j-\frac 12)\Big\}>0)
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
         -->
-        Last Build Date UTC : 2020-03-19 04:18:31
+        Last Build Date UTC : 2021-06-20 17:52:32
       </div>
       
         

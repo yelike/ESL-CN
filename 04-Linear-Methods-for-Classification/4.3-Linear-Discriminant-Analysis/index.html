@@ -80,13 +80,6 @@
     
     <script src="../../js/mathjax.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3680148472128768",
-    enable_page_level_ads: true
-  });
-</script>
   </head>
   
     
@@ -147,35 +140,11 @@
         <!--
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
-
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-          
         
         -->
+        <div style="padding-top:0.4rem;padding-bottom:0.4rem;width:15rem;height:4rem;">
+          <iframe src="https://github.com/sponsors/szcf-weiya/button" title="Sponsor szcf-weiya" height="100%" width="100%" style="display:block;margin:auto;border:0;"></iframe>
+        </div>
       </div>
       
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -241,7 +210,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="上篇" class="md-tabs__link">
+        <a href="../../01-Introduction/1.1-Introduction/index.html" title="上篇" class="md-tabs__link">
           上篇
         </a>
       
@@ -496,7 +465,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-Introduction/2016-07-26-Chapter-1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
+    <a href="../../01-Introduction/1.1-Introduction/index.html" title="1.1 导言" class="md-nav__link">
       1.1 导言
     </a>
   </li>
@@ -3236,6 +3205,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../notes/BS/bs/index.html" title="B 样条在 R, Python, Cpp 中的实现" class="md-nav__link">
+      B 样条在 R, Python, Cpp 中的实现
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3358,8 +3339,8 @@
 <td>szcf-weiya</td>
 </tr>
 <tr>
-<td>时间</td>
-<td>2016-12-09, 2016-12-10</td>
+<td>发布</td>
+<td>2016-12-16</td>
 </tr>
 <tr>
 <td>更新</td>
@@ -3442,12 +3423,13 @@ a'Da-b'Db=(a+b)'D(a-b)\,.
 </script>
 </p>
 </div>
-<p>两个类别的情况下在线性判别分析和线性最小二乘之间有一个简单的对应，如 \eqref{4.5} 所示．如果满足下面条件则 LDA 分类规则分给第二类
+<p>两个类别的情况下在线性判别分析和线性最小二乘之间有一个简单的对应，如 \eqref{4.5} 所示．如果满足下面条件则 LDA 分类规则分给第二类</p>
 <!--
-<script type="math/tex; mode=display">
+$$
 x^T\hat{\boldsymbol\Sigma}^{-1}(\hat\mu_2-\hat\mu_1)>\frac{1}{2}\hat\mu^T_2\hat\Sigma^{-1}\hat\mu_2-\frac{1}{2}\hat\mu_1^T\hat{\boldsymbol\Sigma}^{-1}\hat\mu_1+\log(N_1/N)-\log(N_2/N)\tag{4.11}
-</script>
+$$
 -->
+<p>
 <script type="math/tex; mode=display">
 x^T\hat{\boldsymbol\Sigma}^{-1}(\hat\mu_2-\hat\mu_1)>\frac{1}{2}(\hat\mu_2+\hat\mu_1)^T\hat{\boldsymbol\Sigma}^{-1}(\hat\mu_2-\hat\mu_1)-\log(N_2/N_1)\tag{4.11}\label{4.11}
 </script>
@@ -3490,12 +3472,12 @@ x^T\hat{\boldsymbol\Sigma}^{-1}(\hat\mu_2-\hat\mu_1)>\frac{1}{2}(\hat\mu_2+\hat\
 <h2 id="lda">LDA 的计算<a class="headerlink" href="#lda" title="Permanent link">&para;</a></h2>
 <p>作为下一主题的铺垫，我们简单地岔开去讨论 LDA，特别是 QDA 的计算．这些计算可以通过对角化 $\hat\ssigma$ 或 $\hat\ssigma_k$ 来简化．对于后者，假设我们对每一个计算特征值分解 $\hat\ssigma_k=\mathbf U_k\mathbf D_k\mathbf U_k^T$，其中 $\mathbf U_k$ 是 $p\times p$ 的正交矩阵，$\mathbf D_k$ 是正的特征值 $d_{k\ell}$ 组成的对角矩阵．则 $\delta_k(x)$ \eqref{4.12} 的组成成分是</p>
 <ul>
-<li>$(x-\hat\mu_k)^T\hat\ssigma_k^{-1}(x-\hat\mu_k)=[U_k^T(x-\hat\mu_k)]^TD_k^{-1}[U_k^T(x-\hat\mu_k)]$</li>
+<li>$(x-\hat\mu_k)^T\hat\ssigma_k^{-1}(x-\hat\mu_k)=[\U_k^T(x-\hat\mu_k)]^T\mathbf D_k^{-1}[\mathbf U_k^T(x-\hat\mu_k)]$</li>
 <li>$\log\vert \hat\ssigma_k\vert=\sum_{\ell}\log d_{k\ell}$</li>
 </ul>
 <p>按照上面列出的计算步骤，LDA 分类器可以通过下面的步骤来实现</p>
 <ul>
-<li>对数据关于协方差矩阵 $\hat{\boldsymbol\Sigma}$ 球面化：$X^*\leftarrow \mathbf D^{-\frac{1}{2}}\mathbf U^T\mathbf X$，其中 $\hat{\boldsymbol\Sigma}=\mathbf U\mathbf D\mathbf U^T$．$X^*$ 的共同协方差矩阵变为单位阵．</li>
+<li>对数据关于协方差矩阵 $\hat{\boldsymbol\Sigma}$ 球面化：$X^*\leftarrow \mathbf D^{-\frac{1}{2}}\mathbf U^T X$，其中 $\hat{\boldsymbol\Sigma}=\mathbf U\mathbf D\mathbf U^T$．$X^*$ 的共同协方差矩阵变为单位阵．</li>
 <li>考虑类别先验概率 $\pi_k$ 的影响，在变换后的空间里面分到最近的类别形心．</li>
 </ul>
 <h2 id="_2">降维线性判别分析<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -3518,10 +3500,14 @@ x^T\hat{\boldsymbol\Sigma}^{-1}(\hat\mu_2-\hat\mu_1)>\frac{1}{2}(\hat\mu_2+\hat\
 <li>使用 $\mathbf W$ 特征值分解计算 $\mathbf M^*=\mathbf M\mathbf W^{-\frac{1}{2}}$</li>
 <li>计算 $\mathbf M^*$ 的协方差矩阵 $\mathbf B^*$，（$\mathbf B$ 是 <strong>组间 (between-class)</strong> 协方差），以及特征值分解 $\mathbf B^*=\mathbf V^*\mathbf D_B{\mathbf V^*}^T$．$\mathbf V^*$ 的列 $v_\ell^*$ 从第一个到最后一个依次定义了最优子空间的坐标．</li>
 </ul>
-<p>结合上述的操作，第 $\ell$ 个 <strong>判别变量 (discriminant variable)</strong> 由 $Z_\ell=v_\ell^TX$ 给出，其中 $v_\ell=W^{-\frac{1}{2}}v_\ell^*$．</p>
+<p>结合上述的操作，第 $\ell$ 个 <strong>判别变量 (discriminant variable)</strong> 由 $Z_\ell=v_\ell^TX$ 给出，其中 $v_\ell=\W^{-\frac{1}{2}}v_\ell^*$．</p>
 <div class="admonition note">
 <p class="admonition-title">weiya 注：</p>
-<p>结合 <a href="https://github.com/szcf-weiya/ESL-CN/issues/142">Ex. 4.1</a> 的证明过程来理解上述算法．主要思想是先求 $\mathbf W^{-\frac 12}\mathbf B\mathbf W^{-\frac 12}$ 的特征向量 $v_\ell^*$，则 $\mathbf W^{-1}\mathbf B$ 的特征向量为 $\mathbf W^{-\frac 12}v_\ell^*$．</p>
+<p>结合 <a href="https://github.com/szcf-weiya/ESL-CN/issues/142">Ex. 4.1</a> 的证明过程来理解上述算法．主要思想是先求 $\mathbf W^{-\frac 12}\mathbf B\mathbf W^{-\frac 12}$ 的特征向量 $v_\ell^*$，则 $\mathbf W^{-1}\mathbf B$ 的特征向量为 $\mathbf W^{-\frac 12}v_\ell^*$．同时注意到我们有 $\Var(v_\ell^TX)=1$ 及 $\Cov(v_\ell^TX,v_k^TX)=0, \ell\neq k$，则判别函数 $\delta_k(z)$ 中的平方和项为
+<script type="math/tex; mode=display">
+(Z - \mu_k[Z])'(Z - \mu_k[Z]) = \sum_{\ell=1}^s(Z_\ell - \mu_{k}[Z_\ell])^2\,,
+</script>
+其中 $s$ 为判别变量的个数，$\mu_k[Z_\ell] = v_\ell^T\mu_k$.</p>
 </div>
 <p>Fisher 通过不同的方式得到这个分解，完全没有引用高斯分布．他提出下面的问题：</p>
 <blockquote>
@@ -3553,7 +3539,7 @@ x^T\hat{\boldsymbol\Sigma}^{-1}(\hat\mu_2-\hat\mu_1)>\frac{1}{2}(\hat\mu_2+\hat\
 <script type="math/tex; mode=display">
 \underset{a}{\max}\;a^T\mathbf Ba \; \st \; a^T\mathbf Wa=1\tag{4.16}
 </script>
-这是一个一般化的特征值问题，$a$ 是由 $\mathbf W^{-1}\mathbf B$ 的最大特征值给出．不难证明（<a href="https://github.com/szcf-weiya/ESL-CN/issues/142">练习 4.1</a>）最优 $a_1$ 等于上面定义的 $v_1$．类似地，可以找到下一个方向 $a_2$，在 $W$ 中与 $a_1$ 正交，使得 $a_2^TBa_2/a_2^TWa_2$ 最大化；解为 $a_2=v_2$，其余类似．$a_\ell$ 被称作 <strong>判别坐标 (discriminant coordinates)</strong>，不会与判别函数相混淆．他们也被称作 <strong>典则变量 (canonical variables)</strong>，因为这些结果的一个变形是通过在预测变量矩阵 $X$ 上对指示响应矩阵 $Y$ 进行典则相关分析得到的．这一点将在 <a href="../../12-Support-Vector-Machines-and-Flexible-Discriminants/12.5-Flexible-Disciminant-Analysis/index.html">12.5 节</a>继续讨论．</p>
+这是一个一般化的特征值问题，$a$ 是由 $\mathbf W^{-1}\mathbf B$ 的最大特征值给出．不难证明（<a href="https://github.com/szcf-weiya/ESL-CN/issues/142">练习 4.1</a>）最优 $a_1$ 等于上面定义的 $v_1$．类似地，可以找到下一个方向 $a_2$，在 $\mathbf W$ 中与 $a_1$ 正交，使得 $a_2^T{\mathbf B}a_2/a_2^T{\mathbf W}a_2$ 最大化；解为 $a_2=v_2$，其余类似．$a_\ell$ 被称作 <strong>判别坐标 (discriminant coordinates)</strong>，不要与判别函数相混淆．他们也被称作 <strong>典则变量 (canonical variables)</strong>，因为这些结果的一个变形是通过在预测变量矩阵 $\mathbf X$ 上对指示响应矩阵 $\mathbf Y$ 进行典则相关分析得到的．这一点将在 <a href="../../12-Support-Vector-Machines-and-Flexible-Discriminants/12.5-Flexible-Disciminant-Analysis/index.html">12.5 节</a>继续讨论．</p>
 <div class="admonition info">
 <p class="admonition-title">weiya 注：Ex. 4.1</p>
 <p>已解决，详见 <a href="https://github.com/szcf-weiya/ESL-CN/issues/142">Issue 142: Ex. 4.1</a>．</p>
@@ -3571,7 +3557,11 @@ x^T\hat{\boldsymbol\Sigma}^{-1}(\hat\mu_2-\hat\mu_1)>\frac{1}{2}(\hat\mu_2+\hat\
 <blockquote>
 <p>图 4.10. 对于元音数据，训练和测试误差作为判别边界的维数的函数的图象．这种情况下最优的误差率是维数等于 2 的情况．图 4.11 显示了这个空间的判别边界．</p>
 </blockquote>
-<p>Fisher <strong>降秩判别分析 (RDA)</strong> 和指示响应矩阵回归之间存在着紧密的联系．事实表明 LDA 意味着 $\hat{\mathbf  Y}^T\mathbf Y$ 的特征值分解后进行回归．在两个类的情形下，存在一个单判别变量，乘上一个标量后能与 $\hat{\mathbf Y}$ 的某一列相等．这些联系将在<a href="../../12-Support-Vector-Machines-and-Flexible-Discriminants/12.1-Introduction/index.html">第 12 章</a>中讨论．一个相关的事实是先将原始的预测变量 $\mathbf X$ 转换为 $\hat{\mathbf Y}$，然后用 $\hat{\mathbf Y}$ 做 LDA 与在原空间中做 LDA 是相同的（<a href="https://github.com/szcf-weiya/ESL-CN/issues/144">练习 4.3</a>）．</p>
+<p>Fisher <strong>降秩判别分析 (RDA)</strong> 和指示响应矩阵回归之间存在着紧密的联系．事实表明 LDA 意味着先回归然后对 $\hat{\mathbf  Y}^T\mathbf Y$ 做特征值分解．在两个类的情形下，对于 $\hat{\mathbf Y}$ 的任一列，都存在一个单判别变量，乘上一个标量后能与该列相等．这些联系将在<a href="../../12-Support-Vector-Machines-and-Flexible-Discriminants/12.1-Introduction/index.html">第 12 章</a>中讨论．一个相关的事实是先将原始的预测变量 $\mathbf X$ 转换为 $\hat{\mathbf Y}$，然后用 $\hat{\mathbf Y}$ 做 LDA 与在原空间中做 LDA 是相同的（<a href="https://github.com/szcf-weiya/ESL-CN/issues/144">练习 4.3</a>）．</p>
+<div class="admonition info">
+<p class="admonition-title">weiya 注：Ex. 4.3</p>
+<p>已解决，详见 <a href="https://github.com/szcf-weiya/ESL-CN/issues/144">Issue 144: Ex. 4.3</a>，欢迎讨论交流～</p>
+</div>
 <p><img alt="" src="../../img/04/fig4.11.png" /></p>
 <blockquote>
 <p>图 4.11. 对于元音训练数据，由前两个典则变量张成的二维子空间中的判别边界．注意到在任何高维子空间下，判别边界是高维仿射平面，而且不可以表示成直线．</p>
@@ -3596,6 +3586,16 @@ x^T\hat{\boldsymbol\Sigma}^{-1}(\hat\mu_2-\hat\mu_1)>\frac{1}{2}(\hat\mu_2+\hat\
               
               
                 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3680148472128768"
+     data-ad-slot="6465742678"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                   <h2 id="__comments">Comments</h2>
                   <div id="comment"></div>
 <script>
@@ -3660,7 +3660,7 @@ x^T\hat{\boldsymbol\Sigma}^{-1}(\hat\mu_2-\hat\mu_1)>\frac{1}{2}(\hat\mu_2+\hat\
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2016-2020 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
+            Copyright &copy; 2016-2021 weiya <a href="//beian.miit.gov.cn/">浙ICP备17016863号</a>
           </div>
         
         <!--
@@ -3670,7 +3670,7 @@ x^T\hat{\boldsymbol\Sigma}^{-1}(\hat\mu_2-\hat\mu_1)>\frac{1}{2}(\hat\mu_2+\hat\
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
         -->
-        Last Build Date UTC : 2020-03-19 04:18:25
+        Last Build Date UTC : 2021-06-20 17:52:23
       </div>
       
         
