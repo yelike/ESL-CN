@@ -6,15 +6,13 @@ import glob
 pat = re.compile(r"\*\*([\u4e00-\u9fa5\-a-zA-Z]+)\s?\((\b[a-zA-Z ,\-]+\b)\)\*\*")
 
 tags = [[] for i in range(26)]
-docsdir = os.listdir("docs/")
+docsdir = sorted(os.listdir("docs/"))
 tagdict = dict()
-for i in range(1, 27):
-    # get the idx of the child directory
-    for idx, x in enumerate(docsdir):
-        if f'{i:02}' in x:
-            break
+for idx in range(18):
+    i = idx + 1
+    x = docsdir[idx]
     chdir = docsdir[idx]
-    for file in glob.glob(f"docs/{chdir}/*.md"):
+    for file in sorted(glob.glob(f"docs/{chdir}/*.md")):
         print(f"processing {file}...")
         fl = open(file, "rt")
         contents = fl.read()
@@ -25,11 +23,13 @@ for i in range(1, 27):
         print(mat)
         if mat:
             secid = file.split(f'docs/{chdir}/')[1].split('-')[0]
-            url = file.split('docs/')[1].replace('.md', '/index.html')
+            url = file.split('docs/')[1]
             for m in mat:
                 key = f'{m[1]}: {m[0]}'
                 if secid == "Bibliographic":
                     val = f'[第 {i} 章文献笔记]({url})'
+                elif secid == "Appendix":
+                    val = f'[第 5 章附录]({url})'
                 else:
                     val = f'[第 {secid} 节]({url})'
                 try:
@@ -55,7 +55,7 @@ for i in range(26):
         # section
         tagpage.write(f"\n## {letters[i]}\n")
         # !!strange behavior of `writelines`: https://stackoverflow.com/questions/13730107/writelines-writes-lines-without-newline-just-fills-the-file
-        tagpage.writelines(tag + '\n' for tag in tags[i])
+        tagpage.writelines(tag + '\n' for tag in sorted(tags[i]))
 
     
 tagpage.close()

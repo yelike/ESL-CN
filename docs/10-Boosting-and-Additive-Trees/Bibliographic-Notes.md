@@ -1,12 +1,12 @@
 # 10.15 文献笔记
 
-| 原文   | [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf) |
+| 原文   | [The Elements of Statistical Learning](https://esl.hohoweiya.xyz/book/The%20Elements%20of%20Statistical%20Learning.pdf) |
 | ---- | ---------------------------------------- |
 | 翻译   | szcf-weiya                               |
 | 发布 | 2017-09-05 |
 | 更新 | {{ git_revision_date }} |
 
-Schapire (1990)[^1] 在 PAC 学习框架中 (Valiant, 1984[^2]; Kearns and Vazirani, 1994[^3]) 发展了第一个简单的boosting 过程．Schapire 证明了 **弱学习器 (weak learner)** 总是可以通过在输入数据流的过滤版本训练两个额外的分类器来提高效果．弱学习器是产生两类别分类器的算法，该分类器保证了效果要显著地比抛硬币的猜测好．当在前 $N$ 个训练点上学习出初始的分类器 $G_1$，
+Schapire (1990)[^1] 在 PAC 学习框架中 (Valiant, 1984[^2]; Kearns and Vazirani, 1994[^3]) 发展了第一个简单的boosting 过程．Schapire 证明了 **弱学习器 (weak learners)** 总是可以通过在输入数据流的过滤版本训练两个额外的分类器来提高效果．弱学习器是产生两类别分类器的算法，该分类器保证了效果要显著地比抛硬币的猜测好．当在前 $N$ 个训练点上学习出初始的分类器 $G_1$，
 
 - $G_2$ 在 $N$ 新样本点中学习，其中有一半是被 $G_1$ 误分类的；
 - $G_3$ 在 $G_1$ 和 $G_2$ 不一致的 $N$ 个样本点上学习；

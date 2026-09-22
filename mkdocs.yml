@@ -66,7 +66,7 @@ pages:
       - 7.1 导言: '07-Model-Assessment-and-Selection/7.1-Introduction.md'
       - 7.2 偏差，方差和模型复杂度: '07-Model-Assessment-and-Selection/7.2-Bias-Variance-and-Model-Complexity.md'
       - 7.3 偏差-方差分解: '07-Model-Assessment-and-Selection/7.3-The-Bias-Variance-Decomposition.md'
-      - 7.4 测试误差率的 optimism: '07-Model-Assessment-and-Selection/7.4-Optimism-of-the-Training-Error-Rate.md'
+      - 7.4 测试误差率的乐观偏差: '07-Model-Assessment-and-Selection/7.4-Optimism-of-the-Training-Error-Rate.md'
       - 7.5 样本内预测误差的估计: '07-Model-Assessment-and-Selection/7.5-Estimates-of-In-Sample-Prediction-Error.md'
       - 7.6 参数的有效个数: '07-Model-Assessment-and-Selection/7.6-The-Effective-Number-of-Parameters.md'
       - 7.7 贝叶斯方法和 BIC: '07-Model-Assessment-and-Selection/7.7-The-Bayesian-Approach-and-BIC.md'
@@ -94,7 +94,7 @@ pages:
       - 9.1 广义可加模型: '09-Additive-Models-Trees-and-Related-Methods/9.1-Generalized-Additive-Models.md'
       - 9.2 基于树的方法: '09-Additive-Models-Trees-and-Related-Methods/9.2-Tree-Based-Methods.md'
       - 9.3 PRIM: '09-Additive-Models-Trees-and-Related-Methods/9.3-PRIM.md'
-      - 9.4 多变量自适应回归样条: '09-Additive-Models-Trees-and-Related-Methods/9.4-MARS.md'
+      - 9.4 多元自适应回归样条: '09-Additive-Models-Trees-and-Related-Methods/9.4-MARS.md'
       - 9.5 专家的分层混合: '09-Additive-Models-Trees-and-Related-Methods/9.5-Hierarchical-Mixtures-of-Experts.md'
       - 9.6 缺失数据: '09-Additive-Models-Trees-and-Related-Methods/9.6-Missing-Data.md'
       - 9.7 计算上的考虑: '09-Additive-Models-Trees-and-Related-Methods/9.7-Computational-Considerations.md'
@@ -110,7 +110,7 @@ pages:
       - 10.7 数据挖掘的现货方法: '10-Boosting-and-Additive-Trees/10.7-Off-the-Shelf-Procedures-for-Data-Mining.md'
       - 10.8 垃圾邮件的例子: '10-Boosting-and-Additive-Trees/10.8-Spam-Data.md'
       - 10.9 Boosting 树: '10-Boosting-and-Additive-Trees/10.9-Boosting-Trees.md'
-      - 10.10 Gradient Boosting 的数值优化: '10-Boosting-and-Additive-Trees/10.10-Numerical-Optimization-via-Gradient-Boosting.md'
+      - 10.10 基于梯度提升的数值优化: '10-Boosting-and-Additive-Trees/10.10-Numerical-Optimization-via-Gradient-Boosting.md'
       - 10.11 大小合适的 boosting 树: '10-Boosting-and-Additive-Trees/10.11-Right-Sized-Trees-for-Boosting.md'
       - 10.12 正则化: '10-Boosting-and-Additive-Trees/10.12-Regularization.md'
       - 10.13 解释性: '10-Boosting-and-Additive-Trees/10.13-Interpretation.md'
@@ -132,8 +132,8 @@ pages:
       - 12.2 支持向量分类器: '12-Support-Vector-Machines-and-Flexible-Discriminants/12.2-The-Support-Vector-Classifier.md'
       - 12.3 支持向量机和核: '12-Support-Vector-Machines-and-Flexible-Discriminants/12.3-Support-Vector-Machines-and-Kernels.md'
       - 12.4 广义线性判别分析: '12-Support-Vector-Machines-and-Flexible-Discriminants/12.4-Generalizing-Linear-Discriminant-Analysis.md'
-      - 12.5 FDA: '12-Support-Vector-Machines-and-Flexible-Discriminants/12.5-Flexible-Disciminant-Analysis.md'
-      - 12.6 PDA: '12-Support-Vector-Machines-and-Flexible-Discriminants/12.6-Penalized-Discriminant-Analysis.md'
+      - 12.5 灵活判别分析: '12-Support-Vector-Machines-and-Flexible-Discriminants/12.5-Flexible-Disciminant-Analysis.md'
+      - 12.6 惩罚判别分析: '12-Support-Vector-Machines-and-Flexible-Discriminants/12.6-Penalized-Discriminant-Analysis.md'
       - 12.7 混合判别分析: '12-Support-Vector-Machines-and-Flexible-Discriminants/12.7-Mixture-Discriminant-Analysis.md'
       - 计算上的考虑: '12-Support-Vector-Machines-and-Flexible-Discriminants/Computational-Considerations.md'
       - 文献笔记: '12-Support-Vector-Machines-and-Flexible-Discriminants/Bibliographic-Notes.md'
@@ -152,7 +152,7 @@ pages:
       - 14.2 关联规则: '14-Unsupervised-Learning/14.2-Association-Rules.md'
       - 14.3 聚类分析: '14-Unsupervised-Learning/14.3-Cluster-Analysis.md'
       - 14.4 自组织图: '14-Unsupervised-Learning/14.4-Self-Organizing-Maps.md'
-      - 14.5 主成分，主曲线以及主曲面: '14-Unsupervised-Learning/14.5-Principal-Components-Curves-and-Surfaces.md'
+      - 14.5 主成分、主曲线与主曲面: '14-Unsupervised-Learning/14.5-Principal-Components-Curves-and-Surfaces.md'
       - 14.6 非负矩阵分解: '14-Unsupervised-Learning/14.6-Non-negative-Matrix-Factorization.md'
       - 14.7 独立成分分析和探索投影寻踪: '14-Unsupervised-Learning/14.7-Independent-Component-Analysis-and-Exploratory-Projection-Pursuit.md'
       - 14.8 多维缩放: '14-Unsupervised-Learning/14.8-Multidimensional-Scaling.md'
@@ -241,7 +241,7 @@ edit_uri: edit/master/docs/
 
 #website_cn: 随笔
 
-copyright: 'Copyright &copy; 2016-2022 weiya'
+copyright: 'Copyright &copy; 2016-2025 weiya'
 
 markdown_extensions:
   - admonition
@@ -320,9 +320,6 @@ google_analytics:
 use_directory_urls: false
 
 enable_search: true
-
-esl_url: 'https://web.stanford.edu/~hastie/ElemStatLearn/'
-# https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf
 
 plugins: 
   - git-revision-date
